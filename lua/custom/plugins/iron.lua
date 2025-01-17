@@ -16,7 +16,7 @@ return {
               format = require('iron.fts.common').bracketed_paste_python,
             },
           },
-          repl_open_cmd = require('iron.view').bottom(40),
+          repl_open_cmd = require('iron.view').split.vertical.botright(0.4),
         },
         keymaps = {
           send_motion = '<space>sc',
