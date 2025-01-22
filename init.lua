@@ -524,7 +524,7 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        pyright = {},
+        -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -545,10 +545,12 @@ require('lazy').setup({
                 callSnippet = 'Replace',
               },
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              -- diagnostics = { disable = { 'missing-fields' } },
+              diagnostics = { disable = { 'missing-fields' } },
             },
           },
         },
+
+        ruff = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -855,25 +857,26 @@ require('lazy').setup({
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
 }, {
-  ui = {
-    -- If you are using a Nerd Font: set icons to an empty table which will use the
-    -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
-    icons = vim.g.have_nerd_font and {} or {
-      cmd = '⌘',
-      config = '🛠',
-      event = '📅',
-      ft = '📂',
-      init = '⚙',
-      keys = '🗝',
-      plugin = '🔌',
-      runtime = '💻',
-      require = '🌙',
-      source = '📄',
-      start = '🚀',
-      task = '📌',
-      lazy = '💤 ',
-    },
-  },
+  ui = {},
+  --   ui = {
+  --     -- If you are using a Nerd Font: set icons to an empty table which will use the
+  --     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
+  --     icons = vim.g.have_nerd_font and {} or {
+  --       cmd = '⌘',
+  --       config = '🛠',
+  --       event = '📅',
+  --       ft = '📂',
+  --       init = '⚙',
+  --       keys = '🗝',
+  --       plugin = '🔌',
+  --       runtime = '💻',
+  --       require = '🌙',
+  --       source = '📄',
+  --       start = '🚀',
+  --       task = '📌',
+  --       lazy = '💤 ',
+  --     },
+  --   },
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
