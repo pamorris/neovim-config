@@ -19,20 +19,20 @@ return {
           repl_open_cmd = require('iron.view').split.vertical.botright(0.4),
         },
         keymaps = {
-          send_motion = '<space>rc',
-          visual_send = '<space>rc',
-          send_file = '<space>rf',
-          send_line = '<space>rl',
-          send_paragraph = '<space>rp',
-          send_until_cursor = '<space>ru',
-          send_mark = '<space>rm',
-          mark_motion = '<space>rc',
-          mark_visual = '<space>rc',
-          remove_mark = '<space>rd',
-          cr = '<space>r<cr>',
-          interrupt = '<space>r<space>',
-          exit = '<space>rq',
-          clear = '<space>rl',
+          send_motion = '<space>Ic',
+          visual_send = '<space>Ic',
+          send_file = '<space>If',
+          send_line = '<space>Il',
+          send_paragraph = '<space>Ip',
+          send_until_cursor = '<space>Iu',
+          send_mark = '<space>Im',
+          mark_motion = '<space>Ic',
+          mark_visual = '<space>Ic',
+          remove_mark = '<space>Id',
+          cr = '<space>r<Ir>',
+          interrupt = '<space>I<space>',
+          exit = '<space>Iq',
+          clear = '<space>Il',
         },
         highlight = {
           italic = true,
@@ -41,10 +41,10 @@ return {
       }
 
       -- Set keymaps for Iron commands *after* iron.nvim is set up
-      vim.keymap.set('n', '<space>rs', '<cmd>IronRepl<cr>')
-      vim.keymap.set('n', '<space>rr', '<cmd>IronRestart<cr>')
-      vim.keymap.set('n', '<space>rf', '<cmd>IronFocus<cr>')
-      vim.keymap.set('n', '<space>rh', '<cmd>IronHide<cr>')
+      vim.keymap.set('n', '<space>Is', '<cmd>IronRepl<cr>')
+      vim.keymap.set('n', '<space>Ir', '<cmd>IronRestart<cr>')
+      vim.keymap.set('n', '<space>If', '<cmd>IronFocus<cr>')
+      vim.keymap.set('n', '<space>Ih', '<cmd>IronHide<cr>')
     end,
   },
 }
